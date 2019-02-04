@@ -10,7 +10,9 @@ using namespace cv;
 const string DIR_TO_FLW_VID = "/home/tim/Dropbox/CS3060/openpiv/openpiv-c--qt/" \
                                   "share/images/brewing_video.mp4";
 
-const string SAVE_DIR = "/home/tim/Dropbox/CS3060/piv_images";
+const string SAVE_DIR_TH = "/home/tim/Dropbox/CS3060/piv_images";
+
+const string SAVE_DIR_RAW = "/home/tim/Dropbox/CS3060/raw_piv_images";
 
 std::vector<Mat> images(VideoCapture vid_obj) {
   // Create vector containing images from specified video (vid_obj)
@@ -63,7 +65,8 @@ int save_threshold_images(Ptr<BackgroundSubtractor> pMOG2, \
   int vec_pos = 0;
   while(!img_vec.empty()){
     pMOG2 -> apply(img_vec[vec_pos], fgMaskMOG2);
-    imwrite(SAVE_DIR + "/" + int_2_str( vec_pos ) + ".png", fgMaskMOG2);
+    imwrite(SAVE_DIR_TH + "/" + int_2_str( vec_pos ) + ".png", fgMaskMOG2);
+    imwrite(SAVE_DIR_RAW + "/" + int_2_str( vec_pos ) + ".png", img_vec[vec_pos]);
     vec_pos++;
   }
 
