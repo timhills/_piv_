@@ -5,6 +5,6 @@ C++ implementation of OpenPIV using Ubuntu 16.04 LTS
 
  * The original source code for openpiv-c--qt can be found at the following URL (I changed a few things according to pull requests found on the github page): https://github.com/OpenPIV/openpiv-c--qt
 
- * URL instructions for installing OpenCV (I used 'Option 2'): http://milq.github.io/install-opencv-ubuntu-debian/
+ * URL for instructions to install OpenCV (I used 'Option 2'): http://milq.github.io/install-opencv-ubuntu-debian/
 
- * background_segmentation contains code that creates threshold images from a video my friend took of beer brewing (this video was taken with a smartphone). Those generated images can then be used with the Qt gui to generate vector maps. 
+ * background_segmentation contains code that creates threshold images from a video my friend took of beer brewing (this video was taken with a smartphone). Those generated images can then be used with the Qt gui to generate vector maps.
